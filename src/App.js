@@ -12,9 +12,15 @@ import NavbarComponent from './components/NavbarComponent';
 
 
 function App() {
-
+  const pageStyle = {
+    backgroundColor: 'lightblue', // Set your desired background color here
+    minHeight: '100vh', // Ensure the background color covers the entire viewport height
+    padding: '20px', // Add padding for content if needed
+  };
   return (
-    <BrowserRouter>
+    <div style={pageStyle}>
+    <div className='bg-success-subtle'>
+ <BrowserRouter>
 <NavbarComponent/>
     <Routes>
       <Route path='/' element = {<HomePageComponent/>} />
@@ -26,6 +32,10 @@ function App() {
     </Routes>
     
     </BrowserRouter>
+    </div>
+    </div>
+
+   
   );
 }
 
